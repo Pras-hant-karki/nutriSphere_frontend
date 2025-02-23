@@ -1,16 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      boxShadow: {
-        "grayish-sm": "2px 2px 0px #ffffff40",
-        "blackish-sm": "2px 2px 0px #000",
-        grayish: "4px 4px 0px #ffffff40",
-        blackish: "4px 4px 0px #000",
-      },
-    },
     colors: {
       // Common Colors
       black: "#000",
@@ -61,5 +53,4 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
   },
-  plugins: [],
 };
