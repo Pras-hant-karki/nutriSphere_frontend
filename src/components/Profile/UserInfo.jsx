@@ -109,7 +109,6 @@ const UserInfo = () => {
       <div className="flex flex-col gap-2">
         <p className="text-xl font-semibold">{user?.data[0].fullname}</p>
         <p className="text-sm font-light">{user?.data[0].email}</p>
-        <p className="text-[15px]">{user?.data[0].bio}</p>
       </div>
 
       <div className="flex flex-col gap-4">
