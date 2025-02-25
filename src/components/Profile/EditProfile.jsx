@@ -6,7 +6,6 @@ const EditProfile = () => {
   const { user, setUser } = useContext(UserContext);
   const [fullname, setFullname] = useState("");
   const [username, setUsername] = useState("");
-  const [bio, setBio] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [initialValues, setInitialValues] = useState({});
@@ -17,13 +16,11 @@ const EditProfile = () => {
     if (user) {
       setFullname(user?.data[0].fullname);
       setUsername(user?.data[0].username);
-      setBio(user?.data[0].bio || "");
       setEmail(user?.data[0].email);
       setPhoneNumber(user?.data[0].phoneNumber || "");
       setInitialValues({
         fullname: user?.data[0].fullname,
         username: user?.data[0].username,
-        bio: user?.data[0].bio || "",
         email: user?.data[0].email,
         phoneNumber: user?.data[0].phoneNumber || "",
       });
@@ -40,7 +37,6 @@ const EditProfile = () => {
         {
           fullname,
           username,
-          bio,
           email,
           phoneNumber,
         },
@@ -62,7 +58,6 @@ const EditProfile = () => {
   const handleReset = () => {
     setFullname(initialValues.fullname);
     setUsername(initialValues.username);
-    setBio(initialValues.bio);
     setEmail(initialValues.email);
     setPhoneNumber(initialValues.phoneNumber);
     setError("");
@@ -107,19 +102,6 @@ const EditProfile = () => {
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
-        />
-      </div>
-
-      <div className="flex flex-col gap-2 md:col-span-2 md-2:col-span-1 lg:col-span-2">
-        <label htmlFor="bio" className="font-medium">
-          Bio
-        </label>
-        <input
-          type="text"
-          id="bio"
-          value={bio}
-          onChange={(e) => setBio(e.target.value)}
           className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
         />
       </div>
