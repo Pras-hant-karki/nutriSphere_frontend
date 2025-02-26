@@ -66,7 +66,7 @@ const UserInfo = () => {
   };
 
   return (
-    <div className="text-black dark:text-dark-slate-85 flex flex-col items-center text-center gap-4 xl:w-[30%] md-2:items-stretch md-2:text-start">
+    <div className="text-black  flex flex-col items-center text-center gap-4 xl:w-[30%] md-2:items-stretch md-2:text-start">
       <div className="relative w-fit">
         <img
           src={
@@ -98,7 +98,7 @@ const UserInfo = () => {
       {profilePicture && !isImageUploaded && (
         <div className="w-full flex justify-center mt-2">
           <button
-            className="self-center text-black dark:text-white flex items-center gap-1.5 px-4 py-1.5 border border-purple-lighter transition duration-200 ease-linear hover:bg-purple-lighter-hover hover:text-black md-2:self-start"
+            className="self-center text-black  flex items-center gap-1.5 px-4 py-1.5 border border-purple-lighter transition duration-200 ease-linear hover:bg-purple-lighter-hover hover:text-black md-2:self-start"
             onClick={uploadProfilePicture}
           >
             <p className="font-semibold">Upload Picture</p>
@@ -115,7 +115,7 @@ const UserInfo = () => {
 
       <div className="flex flex-col gap-4">
         <button
-          className="self-center text-black dark:text-white flex items-center gap-1.5 px-4 py-1.5 border border-purple-lighter transition duration-200 ease-linear hover:bg-purple-lighter-hover hover:text-black md-2:self-start"
+          className="self-center text-black  flex items-center gap-1.5 px-4 py-1.5 border border-purple-lighter transition duration-200 ease-linear hover:bg-purple-lighter-hover hover:text-black md-2:self-start"
           onClick={handleLogout}
         >
           <FiLogOut className="w-5 h-5" />

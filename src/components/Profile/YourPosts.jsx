@@ -82,7 +82,7 @@ const YourPosts = () => {
           {filteredPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md relative"
+              className="bg-white  p-2 rounded-lg shadow-md relative"
             >
               {post.postCover && (
                 <img
@@ -114,7 +114,7 @@ const YourPosts = () => {
       {isDeleteModalOpen && selectedPost && (
         <div className="bg-[#000000cb] text-white fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center">
           <div className="modal relative w-full max-w-2xl overflow-auto">
-            <div className="relative py-10 mx-5 bg-black-75 p-4 rounded-xl shadow dark:bg-gray-700">
+            <div className="relative py-10 mx-5 bg-black-75 p-4 rounded-xl shadow ">
               <button className="absolute top-3 right-4">
                 <IoClose
                   onClick={handleCloseDeleteModal}

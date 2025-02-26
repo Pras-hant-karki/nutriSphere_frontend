@@ -41,11 +41,11 @@ const SearchBody = ({ handlePostClick }) => {
       className="mt-5 mb-16 flex flex-col gap-8 md-2:mb-5"
       onSubmit={handleSearch}
     >
-      <div className="bg-dark-slate-85 dark:bg-black-75 flex items-center justify-between gap-2 px-4 py-2 rounded-full vsm:gap-4">
+      <div className="bg-dark-slate-85 -75 flex items-center justify-between gap-2 px-4 py-2 rounded-full vsm:gap-4">
         <input
           type="text"
           placeholder="Search posts"
-          className="w-full bg-dark-slate-85 dark:bg-black-75 outline-none placeholder:font-light"
+          className="w-full bg-dark-slate-85 -75 outline-none placeholder:font-light"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
@@ -70,7 +70,7 @@ const SearchBody = ({ handlePostClick }) => {
             {searchResults.map((post, index) => (
               <div
                 key={index}
-                className="bg-white cursor-pointer dark:bg-gray-800 p-2 rounded-lg shadow-md"
+                className="bg-white cursor-pointer  p-2 rounded-lg shadow-md"
                 onClick={() => handlePostClick(post)}
               >
                 {post.postCover && (

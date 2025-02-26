@@ -48,13 +48,11 @@ const Dropdown = ({
   return (
     <div className="relative md:col-span-2" ref={dropdownRef}>
       <div className="flex flex-col gap-2">
-        <label className="font-medium text-black dark:text-white">
-          {dropdownLabel}
-        </label>
+        <label className="font-medium text-black ">{dropdownLabel}</label>
 
         <button
           type="button"
-          className="w-full p-4 text-black bg-light-bg dark:bg-black flex items-center justify-between gap-2 border dark:border-white dark:text-white transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter"
+          className="w-full p-4 text-black bg-light-bg  flex items-center justify-between gap-2 border   transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter"
           id="options-menu"
           data-testid="options-menu"
           aria-haspopup="true"
@@ -64,16 +62,16 @@ const Dropdown = ({
           {selectedOption ? selectedOption.title : dropdownPlaceholder}
 
           {showOptions ? (
-            <FaAngleUp className="text-xl dark:text-white" />
+            <FaAngleUp className="text-xl " />
           ) : (
-            <FaAngleDown className="text-xl dark:text-white" />
+            <FaAngleDown className="text-xl " />
           )}
         </button>
       </div>
 
       {showOptions && (
         <div
-          className="dropdown-options w-full absolute z-10 right-0 mt-2 shadow-lg bg-white dark:bg-black max-h-40 overflow-y-scroll"
+          className="dropdown-options w-full absolute z-10 right-0 mt-2 shadow-lg bg-white  max-h-40 overflow-y-scroll"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
@@ -83,7 +81,7 @@ const Dropdown = ({
               <button
                 key={option.title}
                 onClick={() => handleOptionSelect(option)}
-                className="w-full flex items-center p-4 bg-white dark:bg-black dark:text-white text-sm font-medium hover:bg-[#f5f2f2] dark:hover:bg-[#0e0e0e] focus:outline-none"
+                className="w-full flex items-center p-4 bg-white   text-sm font-medium hover:bg-[#f5f2f2]  focus:outline-none"
                 role="menuitem"
               >
                 {option.title}

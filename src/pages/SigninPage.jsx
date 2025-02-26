@@ -58,7 +58,7 @@ const SigninPage = () => {
   };
 
   return (
-    <div className="bg-container bg-contain bg-no-repeat min-h-[100vh] flex bg-light-bg dark:bg-dark-bg">
+    <div className="bg-container bg-contain bg-no-repeat min-h-[100vh] flex bg-light-bg ">
       <div className="w-full flex flex-col items-center sm:flex-row-reverse">
         <div className="max-w-[60%] flex-1 flex items-center justify-center">
           <img src={Logo} alt="" />
@@ -66,14 +66,14 @@ const SigninPage = () => {
 
         <AuthCard>
           <Link to="/">
-            <button className="border dark:border-white p-1 rounded-[3px] sm:hidden">
-              <FaAngleLeft className="text-xl text-black dark:text-white" />
+            <button className="border  p-1 rounded-[3px] sm:hidden">
+              <FaAngleLeft className="text-xl text-black " />
             </button>
           </Link>
 
           <div className="w-full flex flex-col gap-8">
             <div>
-              <h1 className="font-bold text-2xl dark:text-white">Sign In</h1>
+              <h1 className="font-bold text-2xl ">Sign In</h1>
 
               <p className="text-dark-slate font-medium">
                 Enter your account details to sign in!
@@ -105,8 +105,8 @@ const SigninPage = () => {
             </form>
 
             <div className="hidden sm:flex flex-col items-center gap-1 lg:flex-row lg:gap-2 2xl:mt-8">
-              <p className="dark:text-white">You don’t have an account?</p>
-              <Link to="/signup" className="font-bold dark:text-white">
+              <p className="">You don’t have an account?</p>
+              <Link to="/signup" className="font-bold ">
                 Create an account
               </Link>
             </div>

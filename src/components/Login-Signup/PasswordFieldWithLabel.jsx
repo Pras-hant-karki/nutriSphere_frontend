@@ -23,7 +23,7 @@ const PasswordFieldWithLabel = ({ label, placeholder, value, onChange }) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor="password" className="font-semibold dark:text-white">
+      <label htmlFor="password" className="font-semibold ">
         {label}
 
         {error && (
@@ -34,21 +34,21 @@ const PasswordFieldWithLabel = ({ label, placeholder, value, onChange }) => {
         )}
       </label>
 
-      <div className="p-4 bg-white dark:bg-black flex items-center gap-2 border dark:border-white dark:text-white transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter">
+      <div className="p-4 bg-white  flex items-center gap-2 border   transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter">
         <input
           type={showPassword ? "text" : "password"}
           id="password"
           placeholder={placeholder}
           value={value}
           onChange={handlePasswordChange}
-          className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate dark:bg-black dark:text-white"
+          className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate  "
         />
 
         <div onClick={handleTogglePassword} className="cursor-pointer">
           {showPassword ? (
-            <AiFillEye className="text-2xl text-dark-slate dark:text-white" />
+            <AiFillEye className="text-2xl text-dark-slate " />
           ) : (
-            <AiFillEyeInvisible className="text-2xl text-dark-slate dark:text-white" />
+            <AiFillEyeInvisible className="text-2xl text-dark-slate " />
           )}
         </div>
       </div>

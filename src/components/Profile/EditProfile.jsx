@@ -89,7 +89,7 @@ const EditProfile = () => {
           id="fullname"
           value={fullname}
           onChange={(e) => setFullname(e.target.value)}
-          className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
+          className="w-full p-4 outline-none font-medium bg-white  text-black  border border-black  placeholder:text-dark-slate text-sm vsm:text-base"
         />
       </div>
 
@@ -102,7 +102,7 @@ const EditProfile = () => {
           id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
+          className="w-full p-4 outline-none font-medium bg-white  text-black  border border-black  placeholder:text-dark-slate text-sm vsm:text-base"
         />
       </div>
 
@@ -115,7 +115,7 @@ const EditProfile = () => {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
+          className="w-full p-4 outline-none font-medium bg-white  text-black  border border-black  placeholder:text-dark-slate text-sm vsm:text-base"
         />
       </div>
 
@@ -128,7 +128,7 @@ const EditProfile = () => {
           id="phoneNumber"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
-          className="w-full p-4 outline-none font-medium bg-white dark:bg-black text-black dark:text-white border border-black dark:border-white placeholder:text-dark-slate text-sm vsm:text-base"
+          className="w-full p-4 outline-none font-medium bg-white  text-black  border border-black  placeholder:text-dark-slate text-sm vsm:text-base"
         />
       </div>
 
@@ -143,7 +143,7 @@ const EditProfile = () => {
 
         <button
           type="submit"
-          className="w-fit mt-4 bg-black dark:bg-purple-lighter text-white dark:text-black font-semibold text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
+          className="w-fit mt-4 bg-black text-white  font-semibold text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
         >
           Save Changes
         </button>

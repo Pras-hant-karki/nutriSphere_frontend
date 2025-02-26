@@ -11,7 +11,7 @@ const Header = (props) => {
   };
 
   return (
-    <header className="relative flex justify-between md:py-4 md:items-center md:after:bg-black md:after:dark:bg-white md:after:h-[1px] md:after:w-[100vw] md:after:absolute md:after:-left-10 md:after:bottom-0">
+    <header className="relative flex justify-between md:py-4 md:items-center md:after:bg-black  md:after:h-[1px] md:after:w-[100vw] md:after:absolute md:after:-left-10 md:after:bottom-0">
       <div className="flex flex-col">
         <p className="text-purple-lighter font-medium md-2:hidden">
           {props.pageInfo}

@@ -111,12 +111,12 @@ const MainPage = () => {
   const { header, pageInfo, body } = tabConfig[activeTab];
 
   return (
-    <div className="flex w-full min-h-[100vh] bg-light-bg dark:bg-dark-bg">
+    <div className="flex w-full min-h-[100vh] bg-light-bg ">
       <Sidebar activeTab={activeTab} handleTabClick={handleTabClick} />
 
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <div className="flex flex-col justify-between text-black dark:text-white p-6 w-full md-2:ml-[280px] md-2:flex-1 md-2:relative md-2:px-6 md-2:py-0 lg:px-10">
+      <div className="flex flex-col justify-between text-black  p-6 w-full md-2:ml-[280px] md-2:flex-1 md-2:relative md-2:px-6 md-2:py-0 lg:px-10">
         <div>
           <Header
             currentPage={header}

@@ -16,7 +16,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="min-h-[100vh] w-full bg-light-bg dark:bg-dark-bg flex items-center justify-center">
+      <div className="min-h-[100vh] w-full bg-light-bg  flex items-center justify-center">
         Loading...
       </div>
     );

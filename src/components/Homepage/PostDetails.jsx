@@ -35,7 +35,7 @@ const PostDetails = ({ userInfo, fetchUserInfo, post, openModal }) => {
               <div className="flex gap-1 items-center">
                 <IoTime className="w-4 h-4" />
 
-                <p className="text-sm text-black dark:text-dark-slate-85 font-light">
+                <p className="text-sm text-black  font-light">
                   Posted {getTimeDifference(post.date)}
                 </p>
               </div>

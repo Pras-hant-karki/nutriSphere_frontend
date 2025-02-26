@@ -25,7 +25,7 @@ const TextFieldWithLabel = ({
 
   return (
     <div className={`flex flex-col gap-2 ${className}`}>
-      <label htmlFor={label} className="font-semibold dark:text-white">
+      <label htmlFor={label} className="font-semibold ">
         {label}
         {error && (
           <span className="text-sm font-medium text-purple-lighter-hover">
@@ -36,7 +36,7 @@ const TextFieldWithLabel = ({
       </label>
 
       <div
-        className={`p-4 bg-white dark:bg-black flex items-center gap-2 border dark:border-white dark:text-white transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter ${
+        className={`p-4 bg-white  flex items-center gap-2 border   transition-all duration-200 ease-linear hover:border-purple-lighter focus:border-purple-lighter ${
           type === "textarea" ? "items-start" : "items-center"
         }`}
       >
@@ -46,7 +46,7 @@ const TextFieldWithLabel = ({
             placeholder={placeholder}
             value={value}
             onChange={handleInputChange}
-            className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate dark:bg-black dark:text-white resize-none h-24"
+            className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate   resize-none h-24"
           />
         ) : (
           <input
@@ -55,11 +55,11 @@ const TextFieldWithLabel = ({
             placeholder={placeholder}
             value={value}
             onChange={handleInputChange}
-            className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate dark:bg-black dark:text-white"
+            className="flex-1 outline-none rounded-[3px] text-[14px] font-semibold placeholder:text-dark-slate  "
           />
         )}
 
-        {Icon && <Icon className="text-2xl text-black dark:text-white" />}
+        {Icon && <Icon className="text-2xl text-black " />}
       </div>
     </div>
   );

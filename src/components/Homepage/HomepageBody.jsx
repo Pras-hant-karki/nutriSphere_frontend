@@ -32,7 +32,7 @@ const HomepageBody = ({ handlePostClick }) => {
           posts.map((post, index) => (
             <div
               key={index}
-              className="bg-white cursor-pointer dark:bg-gray-800 p-2 rounded-lg shadow-md"
+              className="bg-white cursor-pointer  p-2 rounded-lg shadow-md"
               onClick={() => {
                 handlePostClick(post);
               }}

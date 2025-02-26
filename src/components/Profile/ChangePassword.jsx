@@ -89,7 +89,7 @@ const ChangePassword = () => {
 
         <button
           type="submit"
-          className="w-fit mt-4 bg-black dark:bg-purple-lighter text-white dark:text-black font-semibold text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
+          className="w-fit mt-4 bg-black dark:bg-purple-lighter text-white  font-semibold text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
         >
           Change Password
         </button>

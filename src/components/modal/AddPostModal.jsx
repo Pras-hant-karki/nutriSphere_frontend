@@ -89,14 +89,11 @@ const AddPostModal = ({ closeModal }) => {
   };
 
   return (
-    <div className="bg-[#000000cb] text-black dark:text-white fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center">
+    <div className="bg-[#000000cb] text-black  fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center">
       <div className="modal relative w-full max-w-2xl overflow-auto">
-        <div className="relative my-10 mx-5 bg-light-bg dark:bg-black-75 p-4 rounded-xl shadow dark:bg-gray-700">
+        <div className="relative my-10 mx-5 bg-light-bg -75 p-4 rounded-xl shadow ">
           <button className="absolute top-3 right-4">
-            <IoClose
-              onClick={closeModal}
-              className="w-7 h-7 text-black dark:text-white"
-            />
+            <IoClose onClick={closeModal} className="w-7 h-7 text-black " />
           </button>
 
           <form className="my-6 flex flex-col gap-4">
@@ -106,13 +103,13 @@ const AddPostModal = ({ closeModal }) => {
                 onClick={handleDivClick}
                 className="relative cursor-pointer bg-purple-lighter w-full h-28 md:h-full"
               >
-                <div className="w-full h-full flex items-center justify-center gap-2 bg-[#ffffff70] p-4 dark:bg-[#00000070]">
+                <div className="w-full h-full flex items-center justify-center gap-2 bg-[#ffffff70] p-4 ">
                   {selectedFileName ? (
                     <p>{selectedFileName}</p>
                   ) : (
                     <>
                       <label>
-                        <RxUpload className="cursor-pointer text-2xl text-black dark:text-white" />
+                        <RxUpload className="cursor-pointer text-2xl text-black " />
                       </label>
                       <p className="font-medium">Choose post cover</p>
                     </>
@@ -153,7 +150,7 @@ const AddPostModal = ({ closeModal }) => {
             <div className="flex items-center justify-between md:col-span-2">
               <button
                 type="button"
-                className="w-fit mt-4 bg-black dark:bg-dark-slate text-white text-sm px-4 py-2 rounded-[2px]"
+                className="w-fit mt-4 bg-black  text-white text-sm px-4 py-2 rounded-[2px]"
                 onClick={handleReset}
               >
                 Reset

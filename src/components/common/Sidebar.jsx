@@ -7,7 +7,7 @@ import { CgGym, CgNotes } from "react-icons/cg";
 const Sidebar = ({ activeTab, handleTabClick }) => {
   const { user } = useContext(UserContext);
   return (
-    <div className="fixed z-20 bg-white dark:bg-black bottom-0 w-full md-2:bg-black md-2:w-[280px] md-2:min-h-[100vh] md-2:flex md-2:flex-col md-2:justify-between md-2:py-5">
+    <div className="fixed z-20 bg-white  bottom-0 w-full md-2:bg-black md-2:w-[280px] md-2:min-h-[100vh] md-2:flex md-2:flex-col md-2:justify-between md-2:py-5">
       <div className="md-2:flex md-2:flex-col md-2:gap-6">
         <div className="hidden md-2:flex md-2:justify-center md-2:px-8">
           <img src={BrandLogo} alt="" className="w-28" />
@@ -20,10 +20,10 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
 
           <ul className="flex items-center text-sm justify-between px-6 py-4 border-t md-2:flex-col md-2:gap-2 md-2:items-start md-2:border-none md-2:p-0">
             <li
-              className={`relative hover:text-purple-lighter hover:dark:text-purple-lighter cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
+              className={`relative hover:text-purple-lighter  cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
                 activeTab === "home"
-                  ? "text-purple-lighter dark:text-purple-lighter md-2:text-pale-yellow md-2:bg-dark-bg !impo"
-                  : "text-black dark:text-white"
+                  ? "text-purple-lighter  md-2:text-pale-yellow md-2:bg-dark-bg !impo"
+                  : "text-black "
               }`}
               onClick={() => handleTabClick("home")}
             >
@@ -35,10 +35,10 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
             </li>
 
             <li
-              className={`relative hover:text-purple-lighter hover:dark:text-purple-lighter cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
+              className={`relative hover:text-purple-lighter  cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
                 activeTab === "search"
-                  ? "text-purple-lighter dark:text-purple-lighter md-2:text-purple-lighter md-2:bg-dark-bg"
-                  : "text-black dark:text-white"
+                  ? "text-purple-lighter  md-2:text-purple-lighter md-2:bg-dark-bg"
+                  : "text-black "
               }`}
               onClick={() => handleTabClick("search")}
             >
@@ -50,10 +50,10 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
             </li>
 
             <li
-              className={`relative hover:text-purple-lighter hover:dark:text-purple-lighter cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
+              className={`relative hover:text-purple-lighter  cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
                 activeTab === "exchange"
-                  ? "text-purple-lighter dark:text-purple-lighter md-2:text-purple-lighter md-2:bg-dark-bg"
-                  : "text-black dark:text-white"
+                  ? "text-purple-lighter  md-2:text-purple-lighter md-2:bg-dark-bg"
+                  : "text-black "
               }`}
               onClick={() => {
                 handleTabClick("appointmentRequests");
@@ -70,10 +70,10 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
             </li>
 
             <li
-              className={`relative hover:text-purple-lighter hover:dark:text-purple-lighter cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
+              className={`relative hover:text-purple-lighter  cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
                 activeTab === "workoutRequests"
-                  ? "text-purple-lighter dark:text-purple-lighter md-2:text-purple-lighter md-2:bg-dark-bg"
-                  : "text-black dark:text-white"
+                  ? "text-purple-lighter  md-2:text-purple-lighter md-2:bg-dark-bg"
+                  : "text-black "
               }`}
               onClick={() => {
                 handleTabClick("workoutRequests");
@@ -96,7 +96,7 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
         className="hidden cursor-pointer md-2:flex justify-between items-center md-2:px-4 md-2:py-2 rounded-lg mx-4 transition duration-300 hover:bg-black-75"
         onClick={() => handleTabClick("profile")}
       >
-        <div className="flex items-center gap-2 text-black dark:text-white md-2:text-white">
+        <div className="flex items-center gap-2 text-black  md-2:text-white">
           <img
             src={
               user?.data[0].image
@@ -110,7 +110,7 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
         </div>
 
         <div>
-          <FiMoreHorizontal className="relative cursor-pointer z-20 text-black dark:text-white md-2:w-6 md-2:h-6 md-2:text-white transition duration-300 hover:text-purple-lighter dark:hover:text-purple-lighter" />
+          <FiMoreHorizontal className="relative cursor-pointer z-20 text-black  md-2:w-6 md-2:h-6 md-2:text-white transition duration-300 hover:text-purple-lighter " />
         </div>
       </div>
     </div>

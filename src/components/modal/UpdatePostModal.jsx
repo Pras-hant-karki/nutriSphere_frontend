@@ -76,14 +76,11 @@ const UpdatePostModal = ({ post, closeModal }) => {
   };
 
   return (
-    <div className="bg-[#000000cb] text-black dark:text-white fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center">
+    <div className="bg-[#000000cb] text-black  fixed top-0 left-0 z-50 w-full h-full flex flex-col items-center justify-center">
       <div className="modal relative w-full max-w-2xl overflow-auto">
-        <div className="relative my-10 mx-5 bg-light-bg dark:bg-black-75 p-4 rounded-xl shadow dark:bg-gray-700">
+        <div className="relative my-10 mx-5 bg-light-bg -75 p-4 rounded-xl shadow ">
           <button className="absolute top-3 right-4">
-            <IoClose
-              onClick={closeModal}
-              className="w-7 h-7 text-black dark:text-white"
-            />
+            <IoClose onClick={closeModal} className="w-7 h-7 text-black " />
           </button>
 
           <form className="my-6 flex flex-col gap-4">
@@ -108,7 +105,7 @@ const UpdatePostModal = ({ post, closeModal }) => {
             <div className="flex items-center justify-between md:col-span-2">
               <button
                 type="button"
-                className="w-fit mt-4 bg-black dark:bg-dark-slate text-white text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
+                className="w-fit mt-4 bg-black  text-white text-sm px-4 py-2 rounded-[2px] vsm:text-base md:mt-8"
                 onClick={handleReset}
               >
                 Reset
