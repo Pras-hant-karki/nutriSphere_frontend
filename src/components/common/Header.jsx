@@ -23,13 +23,6 @@ const Header = (props) => {
 
       <div>
         <div className="hidden md:flex items-center gap-6 lg:gap-8">
-          {/* <button className="relative text-black dark:text-white hover:text-purple-lighter hover:dark:text-purple-lighter transition duration-200 ease-linear">
-            <FaBell className="w-[18px] h-[18px]" />
-            <div className="bg-light-bg dark:bg-dark-bg p-0.5 rounded-full absolute -top-1.5 -right-1.5">
-              <div className="bg-pale-green w-2.5 h-2.5 rounded-full"></div>
-            </div>
-          </button> */}
-
           {user.data[0].role === "admin" && (
             <button
               className="text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-2 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"

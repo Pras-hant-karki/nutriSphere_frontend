@@ -62,7 +62,7 @@ const UserInfo = () => {
     localStorage.removeItem("token");
 
     // Navigate the user to the login page
-    window.location.href = "/signin";
+    window.location.href = "/";
   };
 
   return (
@@ -107,7 +107,9 @@ const UserInfo = () => {
       )}
 
       <div className="flex flex-col gap-2">
-        <p className="text-xl font-semibold">{user?.data[0].fullname}</p>
+        <p className="text-xl font-semibold">
+          {user?.data[0].fullname} {user.data[0].role === "admin" && "(Admin)"}
+        </p>
         <p className="text-sm font-light">{user?.data[0].email}</p>
       </div>
 
