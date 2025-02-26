@@ -97,50 +97,94 @@ const WorkoutRequests = () => {
       {/* Form for creating a new workout request */}
       {user.data[0].role !== "admin" && (
         <>
-          <h2 className="font-semibold text-xl mb-4">
-            Submit a Workout Request
-          </h2>
-          <form onSubmit={handleSubmit} className="w-full mb-8">
-            <div className="w-full flex flex-col gap-4">
-              <input
-                type="number"
-                name="height"
-                value={newRequest.height}
-                onChange={handleInputChange}
-                placeholder="Height (cm)"
-                className="p-2 border rounded-lg shadow-sm"
-                required
-              />
-              <input
-                type="number"
-                name="weight"
-                value={newRequest.weight}
-                onChange={handleInputChange}
-                placeholder="Weight (kg)"
-                className="p-2 border rounded-lg shadow-sm"
-                required
-              />
-              <input
-                type="number"
-                name="age"
-                value={newRequest.age}
-                onChange={handleInputChange}
-                placeholder="Age"
-                className="p-2 border rounded-lg shadow-sm"
-                required
-              />
-              <input
-                type="text"
-                name="goal"
-                value={newRequest.goal}
-                onChange={handleInputChange}
-                placeholder="Fitness Goal"
-                className="p-2 border rounded-lg shadow-sm"
-                required
-              />
+          <form
+            onSubmit={handleSubmit}
+            className="w-full bg-white p-6 rounded-lg shadow-md"
+          >
+            <h2 className="text-xl font-semibold text-gray-700 mb-4 text-center">
+              Workout Request Form
+            </h2>
+
+            <div className="w-full flex flex-col gap-6">
+              <div className="flex flex-col">
+                <label
+                  className="text-sm font-medium text-gray-600 mb-1"
+                  htmlFor="height"
+                >
+                  Height (cm)
+                </label>
+                <input
+                  type="number"
+                  id="height"
+                  name="height"
+                  value={newRequest.height}
+                  onChange={handleInputChange}
+                  placeholder="Enter your height"
+                  className="p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label
+                  className="text-sm font-medium text-gray-600 mb-1"
+                  htmlFor="weight"
+                >
+                  Weight (kg)
+                </label>
+                <input
+                  type="number"
+                  id="weight"
+                  name="weight"
+                  value={newRequest.weight}
+                  onChange={handleInputChange}
+                  placeholder="Enter your weight"
+                  className="p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label
+                  className="text-sm font-medium text-gray-600 mb-1"
+                  htmlFor="age"
+                >
+                  Age
+                </label>
+                <input
+                  type="number"
+                  id="age"
+                  name="age"
+                  value={newRequest.age}
+                  onChange={handleInputChange}
+                  placeholder="Enter your age"
+                  className="p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <div className="flex flex-col">
+                <label
+                  className="text-sm font-medium text-gray-600 mb-1"
+                  htmlFor="goal"
+                >
+                  Fitness Goal
+                </label>
+                <input
+                  type="text"
+                  id="goal"
+                  name="goal"
+                  value={newRequest.goal}
+                  onChange={handleInputChange}
+                  placeholder="What’s your fitness goal?"
+                  className="p-3 border rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
+                  required
+                />
+              </div>
+
               <button
                 type="submit"
-                className="bg-purple-lighter hover:bg-purple-lighter-hover text-white p-2 rounded-lg mt-3 hover:bg-purple-700"
+                className="bg-purple-600 hover:bg-purple-700 text-white font-medium p-3 rounded-lg transition-all duration-300"
               >
                 Submit Request
               </button>
@@ -150,7 +194,7 @@ const WorkoutRequests = () => {
       )}
 
       {/* Displaying user's workout requests */}
-      <h2 className="font-semibold text-xl mb-4">Your Workout Requests</h2>
+      <h2 className="font-semibold text-xl mt-4">Your Workout Requests</h2>
       {workoutRequests.length === 0 ? (
         <div className="text-center">
           <p className="font-medium text-lg text-gray-500">
@@ -161,7 +205,7 @@ const WorkoutRequests = () => {
         workoutRequests.map((request, index) => (
           <div
             key={request.id}
-            className="bg-white p-6 rounded-lg shadow-md mb-6"
+            className="bg-white p-6 rounded-lg shadow-md mb-2"
           >
             <h3 className="font-semibold text-xl text-purple-600">
               Request #{index + 1}
