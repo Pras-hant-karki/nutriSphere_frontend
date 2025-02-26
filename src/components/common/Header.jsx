@@ -38,13 +38,15 @@ const Header = (props) => {
             </div>
           </button> */}
 
-          <button
-            className="text-black flex items-center gap-1.5 bg-purple-lighter px-4 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"
-            onClick={handleAddPostClick}
-          >
-            <IoAddCircleSharp className="w-5 h-5" />
-            <p className="font-bold">Add Post</p>
-          </button>
+          {user.data[0].role === "admin" && (
+            <button
+              className="text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-2 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"
+              onClick={handleAddPostClick}
+            >
+              <IoAddCircleSharp className="w-4 h-4" />
+              <p className="font-bold">Add Post</p>
+            </button>
+          )}
 
           <div className="flex border border-black">
             <button
@@ -69,13 +71,15 @@ const Header = (props) => {
         </div>
 
         <div className="md:hidden flex gap-4 items-center">
-          <button
-            className="text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-2 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"
-            onClick={handleAddPostClick}
-          >
-            <IoAddCircleSharp className="w-4 h-4" />
-            <p className="font-bold">Add Post</p>
-          </button>
+          {user.data[0].role === "admin" && (
+            <button
+              className="text-black text-sm flex items-center gap-0.5 bg-purple-lighter px-2 py-1.5 border border-black font-semibold transition duration-200 ease-linear hover:bg-purple-lighter-hover"
+              onClick={handleAddPostClick}
+            >
+              <IoAddCircleSharp className="w-4 h-4" />
+              <p className="font-bold">Add Post</p>
+            </button>
+          )}
 
           <div
             className="cursor-pointer border border-black rounded-full md:hidden"
