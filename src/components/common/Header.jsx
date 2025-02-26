@@ -5,14 +5,6 @@ import { UserContext } from "../../context/UserContext";
 
 const Header = (props) => {
   const { user, setUser } = useContext(UserContext);
-  const [theme, setTheme] = useState("light");
-
-  const handleThemeChange = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark");
-  };
 
   const handleAddPostClick = () => {
     props.openModal();
@@ -47,27 +39,6 @@ const Header = (props) => {
               <p className="font-bold">Add Post</p>
             </button>
           )}
-
-          <div className="flex border border-black">
-            <button
-              className={`p-2 ${
-                theme === "light" ? "bg-purple-lighter" : "dark:bg-dark-bg"
-              } text-black dark:text-white`}
-              onClick={handleThemeChange}
-              data-testid="theme-sun-button"
-            >
-              <BsFillSunFill className="w-3.5 h-3.5" />
-            </button>
-            <button
-              className={`p-2 ${
-                theme === "light" ? "bg-light-bg" : "bg-purple-lighter"
-              } text-black dark:text-white`}
-              onClick={handleThemeChange}
-              data-testid="theme-moon-button"
-            >
-              <BsMoonFill className="w-3.5 h-3.5" />
-            </button>
-          </div>
         </div>
 
         <div className="md:hidden flex gap-4 items-center">
