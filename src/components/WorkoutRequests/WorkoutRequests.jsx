@@ -184,7 +184,7 @@ const WorkoutRequests = () => {
 
               <button
                 type="submit"
-                className="bg-purple-600 hover:bg-purple-700 text-white font-medium p-3 rounded-lg transition-all duration-300"
+                className="bg-purple-lighter hover:bg-purple-lighter-hover text-white font-medium p-3 rounded-lg transition-all duration-300"
               >
                 Submit Request
               </button>
@@ -253,7 +253,7 @@ const WorkoutRequests = () => {
                     placeholder="Enter workout plan"
                     className="w-full p-2 border outline-none rounded-lg shadow-sm"
                     rows={4}
-                    defaultValue={request.workoutPlan || ""} // Add the default value of the existing workout plan if available
+                    defaultValue={request.workoutPlan || ""}
                   />
                   <button
                     onClick={() =>
