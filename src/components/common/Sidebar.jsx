@@ -27,7 +27,6 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
               }`}
               onClick={() => handleTabClick("home")}
             >
-              <FiHome className="w-5 h-5" />
               <p className="hidden font-semibold md-2:block">Homepage</p>
 
               {activeTab === "home" && (
@@ -43,7 +42,6 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
               }`}
               onClick={() => handleTabClick("search")}
             >
-              <FiSearch className="w-5 h-5" />
               <p className="hidden font-semibold md-2:block">Search Posts</p>
 
               {activeTab === "search" && (
@@ -62,7 +60,6 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
                 localStorage.setItem("activeTab", "appointmentRequests");
               }}
             >
-              <CgNotes className="w-5 h-5" />
               <p className="hidden font-semibold md-2:block">
                 Appointment Requests
               </p>
@@ -83,7 +80,6 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
                 localStorage.setItem("activeTab", "workoutRequests");
               }}
             >
-              <CgGym className="w-5 h-5" />
               <p className="hidden font-semibold md-2:block">
                 Workout Requests
               </p>
