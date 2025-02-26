@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import SearchIllustration from "../../assets/images/search.webp";
 
-const SearchBody = ({ userInfo, fetchUserInfo, handlePostClick }) => {
+const SearchBody = ({ handlePostClick }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [searchPerformed, setSearchPerformed] = useState(false);
@@ -70,7 +70,8 @@ const SearchBody = ({ userInfo, fetchUserInfo, handlePostClick }) => {
             {searchResults.map((post, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 p-2 rounded-lg shadow-md"
+                className="bg-white cursor-pointer dark:bg-gray-800 p-2 rounded-lg shadow-md"
+                onClick={() => handlePostClick(post)}
               >
                 {post.postCover && (
                   <img
