@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import Button from "./Button";
-import ChangePassword from "./ChangePassword";
 import EditProfile from "./EditProfile";
 import UserInfo from "./UserInfo";
 import { UserContext } from "../../context/UserContext";
@@ -21,8 +20,6 @@ const ProfileBody = () => {
       <YourPosts />
     ) : activeButton === "Edit Profile" ? (
       <EditProfile />
-    ) : activeButton === "Change Password" ? (
-      <ChangePassword />
     ) : null;
 
   return (

@@ -10,6 +10,7 @@ import AddPostModal from "../components/modal/AddPostModal";
 import WorkoutRequests from "../components/WorkoutRequests/WorkoutRequests";
 import AppointmentRequests from "../components/AppointmentRequests/AppointmentRequests";
 import PostDetails from "../components/Homepage/PostDetails";
+import Charges from "../components/Charges/Charges";
 
 const MainPage = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -105,6 +106,11 @@ const MainPage = () => {
           fetchUserInfo={fetchUserInfo}
         />
       ),
+    },
+    charges: {
+      header: "Charges",
+      pageInfo: "View your charges",
+      body: <Charges />,
     },
   };
 

@@ -88,6 +88,28 @@ const Sidebar = ({ activeTab, handleTabClick }) => {
                 <div className="md-2:bg-purple-lighter h-full w-[2px] absolute left-0"></div>
               )}
             </li>
+
+            {user.data[0].role === "admin" && (
+              <li
+                className={`relative hover:text-purple-lighter  cursor-pointer transition duration-200 ease-linear md-2:text-white md-2:flex md-2:items-center md-2:gap-3 md-2:w-full md-2:px-4 md-2:py-2.5 md-2:rounded-md-2 md-2:hover:bg-dark-bg ${
+                  activeTab === "charges"
+                    ? "text-purple-lighter  md-2:text-purple-lighter md-2:bg-dark-bg"
+                    : "text-black "
+                }`}
+                onClick={() => {
+                  handleTabClick("charges");
+                  localStorage.setItem("activeTab", "charges");
+                }}
+              >
+                <p className="hidden font-semibold md-2:block">
+                  Manage Charges
+                </p>
+
+                {activeTab === "charges" && (
+                  <div className="md-2:bg-purple-lighter h-full w-[2px] absolute left-0"></div>
+                )}
+              </li>
+            )}
           </ul>
         </nav>
       </div>
